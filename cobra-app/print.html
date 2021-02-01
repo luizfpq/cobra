@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
+    <title>
+        <?php echo "$appName &middot; $appVersion"; ?>
+    </title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/navbar.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style media="print">
+        input {
+            display: none;
+        }
+        
+        .btn {
+            display: none;
+        }
+    </style>
+
+</head>
+
+<body onbeforeunload="return OnBeforeUnLoad ()">
+
+    <P align=center>
+        <INPUT onclick=self.print() tabIndex=1 type=button value=Imprimir class="btn btn-success">
+        <INPUT onclick=javascript:window.history.back(); tabIndex=2 type=button value=Voltar class="btn btn-primary">
+        <DIV align=center $pageBreak>
+
+            <table id='table2' style='height: 436px;' border='0' width='775' cellspacing='3' cellpadding='3' $pageBreak>
+                <tbody>
+                    <tr>
+                        <td width='102'>&nbsp;</td>
+                        <td colspan='2' align='right'>Vencimento, $vencimento</td>
+                    </tr>
+                    <tr>
+                        <td align='right' width='102'>
+                            <div align='left'>N&deg; <strong>$i / $maxInstallment </strong></div>
+                        </td>
+                        <td align='right' bgcolor='#FFFF66' width='178'>
+                            <div align='center'><strong><span style='color: #000033;'>NOTA PROMISS&Oacute;RIA</span></strong></div>
+                        </td>
+                        <td align='right' width='240'>Valor:&nbsp;<strong>R$&nbsp;$valor</strong></td>
+                    </tr>
+                    <tr>
+                        <td colspan='3'>
+                            <p align='left'>Ao dia $dia do m&ecirc;s de $mesVencimento do ano de $ano. ***</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan='3'>
+                            <p align='right'>*** pagarei por esta &uacute;nica via de <strong><span style='color: #000033; font-size: medium;'><span style='text-decoration: underline;'>N O T A&nbsp; P R O M I S S &Oacute; R I A</span></span></strong></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan='3'>
+                            <p align='justify'>&Agrave; <strong>$creditorName</strong> - CPF/CNPJ: <strong>$creditorDocument</strong>&nbsp;OU &Agrave; SUA ORDEM A QUANTIA DE: *** &nbsp;<strong>$valorExtenso</strong> &nbsp;*** EM MOEDA CORRENTE NACIONAL.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan='3'>
+                            <p align='justify'>Pag&aacute;vel em: $creditorCity</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan='3'>Emitente: <strong>$obligatorName</strong></td>
+                    </tr>
+                    <tr>
+                        <td colspan='2'>CPF/CNPJ: <strong>$obligatorDocument</strong></td>
+                        <td align='right' width='240'>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td colspan='2'>Endere&ccedil;o: $obligatorAddress - $obligatorCity</td>
+                        <td>
+                            <p>&nbsp;</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan='2'>&nbsp;</td>
+                        <td align='middle' valign='bottom' width='240'>
+                            <div align='left'>
+                                <p align='center'>$creditorCity, $dia de $mes de $ano</p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan='3'>&nbsp;
+                            <div align='left'>
+                                <p align='center'>____________________________________________________________________________________</p>
+                                <p align='center'><strong>$obligatorName </strong></p>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+
+            <CENTER></CENTER>
+        </DIV>

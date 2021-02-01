@@ -1,0 +1,12 @@
+body {
+  padding-top: 500px;
+  padding-bottom: 20px;
+  /*background: linear-gradient(0deg, #4CAF50, white); /* Standard syntax */
+    background-image: url("../img/background.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 120%;
+}
+
+.navbar {
+  margin-bottom: 20px;
+}
