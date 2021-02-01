@@ -1,5 +1,7 @@
 <img src="cobra-app/app/assets/img/icons8-snake-80.png" width="100" height="100" align="right" />
+
 # Cobra
+
 Sistema de emissão de notas promissórias com electron.
 
 # Sobre
