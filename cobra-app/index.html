@@ -7,6 +7,41 @@
     <link rel="stylesheet" href="assets/css/bootstrap.css" type="text/css">
     <link rel="stylesheet" href="assets/css/splash.css" type="text/css">
     <script src="assets/js/system.js"></script>
+    <script>
+        var $progress = $(".progress-bar");
+        var $section = $('.progress-bar');
+        var $queue = $({});
+        $(function() {
+
+            var $section = $('.progress-bar');
+
+            function loadDaBars() {
+                $(".progress-bar").each(function() {
+                    $(this)
+                        .animate({
+                            width: '100%'
+                        }, 2500);
+                });
+            }
+
+            $(document).bind('scroll', function(ev) {
+                var scrollOffset = $(document).scrollTop();
+                var containerOffset = $section.offset().top - window.innerHeight;
+                if (scrollOffset > containerOffset) {
+                    loadDaBars();
+                    // unbind event not to load scrolsl again
+                    $(document).unbind('scroll');
+                }
+            });
+        });
+    </script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/progressbar.js"></script>
+
 
     <title>
         Cobra &middot; v0.1.0
@@ -32,8 +67,9 @@
     </div>
 
 
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/progressbar.js"></script>
+
+
+
 
 </body>
 
